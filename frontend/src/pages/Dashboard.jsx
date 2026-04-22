@@ -7,9 +7,11 @@ export default function Dashboard() {
 
   const token = localStorage.getItem("token");
 
+  const BASE_URL = "https://mern-project-9u8s.onrender.com"; // 🔥 clean base
+
   const fetchExpenses = async () => {
     try {
-      const res = await axios.get("http://https://mern-project-9u8s.onrender.com/api/expenses", {
+      const res = await axios.get(`${BASE_URL}/api/expenses`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setExpenses(res.data);
@@ -26,9 +28,13 @@ export default function Dashboard() {
     e.preventDefault();
 
     try {
-      await axios.post("http://https://mern-project-9u8s.onrender.com/api/expenses", form, {
-        headers: { Authorization: `Bearer ${token}` }
-      });
+      await axios.post(
+        `${BASE_URL}/api/expenses`,
+        form,
+        {
+          headers: { Authorization: `Bearer ${token}` }
+        }
+      );
 
       setForm({ title: "", amount: "", category: "" });
       fetchExpenses();
