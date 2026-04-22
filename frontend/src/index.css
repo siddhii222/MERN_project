@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e4e9ee;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: rgb(243, 268, 247);
+  padding: 20px;
+  margin-top: 40px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: rgb(247, 221, 221);
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.link {
+  margin-top: 10px;
+  text-align: center;
+  color: blue;
+  cursor: pointer;
+}
