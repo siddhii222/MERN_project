@@ -9,7 +9,7 @@ export default function Dashboard() {
 
   const fetchExpenses = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/expenses", {
+      const res = await axios.get("http://https://mern-project-9u8s.onrender.com/api/expenses", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setExpenses(res.data);
@@ -26,7 +26,7 @@ export default function Dashboard() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/expenses", form, {
+      await axios.post("http://https://mern-project-9u8s.onrender.com/api/expenses", form, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

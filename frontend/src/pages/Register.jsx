@@ -10,7 +10,7 @@ export default function Register() {
     setError("");
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", form);
+      await axios.post("http://https://mern-project-9u8s.onrender.com/api/auth/register", form);
       alert("Registered successfully");
       window.location.href = "/";
 
